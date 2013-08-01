@@ -1,0 +1,14 @@
+USER
+
+#1. At the beginning of the day the user gets notified to put offers
+#2. The user is also notified of new data at each point in time
+#3. The user analyzes the data received from the market and takes
+    action on it.  An action is a list of orders or cancellations and
+    new orders.
+
+State of the user:
+1. It has a money.
+2. It has a portfolio of stocks.
+2. It has a list of offers to made (it keeps track of the offers made to the market).
+3. It has a list of companies to watch, based on the research done.
+4. It looses money with each order carried.

@@ -1,0 +1,26 @@
+DIFFERENT ENTITIES FOR MARKET SIMULATION
+
+1. MARKET:
+1.1. WITH USER:
+1.1.1. Receives order from user, together with the money, or with stocks.
+1.1.2. Fills the offer whenever the offer is fulfillable.
+1.1.2.1 Notifies the user that the offer has been carried.
+1.1.2.1.1 Notifies about money (returns back money)
+1.1.2.1.2 Notifies about stocks sold (returns back stocks)
+1.1.4. At the end of the day, return offers and money or stocks not wasted.
+1.1.5. At each point in time, report to user the new value of a
+		list of subscribed stocks and their values and volumes.
+
+1.2. WITH DATA STORAGE
+1.2.1 Get the list of prices of stocks from the storage.
+1.2.1.1 Options: at the beginning of the day, or every certain
+			period of time.
+			
+1.3. ALGORITHM
+1.3.1 For each point in time (minute, hour, etc.)
+1.3.1.1 For each stock
+1.3.1.1.0 Get value and volume of stock at this point in time.
+1.3.1.1.1 If the user is subscribed to this stock, hand data to user.
+1.3.1.1.2 Wait for orders from the user, based on its analysis. 
+1.3.1.1.2 For each of the orders for this stock, pass the data to the order
+			and let the order execute itself or not, depending on its status. 
